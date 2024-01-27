@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,20 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.__bg_gradient__::before {
+  content: "";
+  bottom: 0; /* Attach the pseudo-element to the bottom of the container */
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(123deg, #8300ff, transparent, #8300ff);
+  opacity: 0.2;
+  pointer-events: none; /* This makes the pseudo-element not clickable */
 }
